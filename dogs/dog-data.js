@@ -20,3 +20,4 @@ let dogs = [
         color: 'brown',
     }
 ];
+// 3 arrays of data 1-strings 1-add nested object array ex: eye color : {'blue','green'}

@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { dogs } from './dog-data.js';
+import { dogs } from './dogs/dog-data.js';
 // let state
 let list = [];
 // set event listeners 
