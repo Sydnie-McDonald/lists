@@ -1,14 +1,16 @@
 import { dogs } from './dogs/dog-data.js';
 
-export function renderCat(dogs) {
-    const dogEl = document.createElement('div');
-    const nameEl = document.createElement('nameEl');
-    nameEl.textContent = dogs.name;
+export function renderDogs(dogs) {
+    const div = document.createElement('div');
+    div.classList.add('dog');
+    div.style.top = dogs.top;
+    div.style.left = dogs.left;
 
+    const breedSpan = document.createElement('span');
+    breedSpan.textContent = dogs.breed;
+    breedSpan.classList.add('breed');
 
-    dogEl.classList.add('cat-box');
-
-    dogEl.append(nameEl);
-
-    return dogEl;
+    a.append(breedSpan, span);
+    div.append(a);
+    return div;
 }
