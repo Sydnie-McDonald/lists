@@ -6,11 +6,6 @@ export function renderDogs(dogs) {
     div.style.top = dogs.top;
     div.style.left = dogs.left;
 
-    const breedSpan = document.createElement('span');
-    breedSpan.textContent = dogs.breed;
-    breedSpan.classList.add('breed');
-
-    a.append(breedSpan, span);
-    div.append(a);
+    div.append(dogs);
     return div;
 }
