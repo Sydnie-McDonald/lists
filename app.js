@@ -2,19 +2,18 @@
 import { dogs } from './dogs/dog-data.js';
 import { renderDogs } from './render.js';
 
-const main = document.querySelector('main');
-
-for (let animal of animals) {
-    const animalDiv = renderListItem(animal);
-    main.append(animalDiv);
-}
-
-
+const renderListButton = document.getElementById('list-button');
 // let state
-let list = [];
+let list = document.getElementById("lists");
 
 // set event listeners
-
+renderListButton.addEventListener('click', () => {
+  for (let dog of dogs) {
+    const dogsDiv = renderDogs(dogs);
+    list.append(dogsDiv);
+}
+});
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
