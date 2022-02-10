@@ -1,11 +1,12 @@
 import { dogs } from './dogs/dog-data.js';
 
-export function renderDogs(dogs) {
+export function renderDog(dog) {
     const div = document.createElement('div');
     div.classList.add('dog');
-    div.style.top = dogs.top;
-    div.style.left = dogs.left;
+
+
 
     div.append(dogs);
     return div;
 }
+// finish render function and grab dog id , name, breed, color, and assign the elements

@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 import { dogs } from './dogs/dog-data.js';
-import { renderDogs } from './render.js';
+import { renderDog } from './render.js';
 
 const renderListButton = document.getElementById('list-button');
 // let state
@@ -8,8 +8,9 @@ let list = document.getElementById("lists");
 
 // set event listeners
 renderListButton.addEventListener('click', () => {
+  
   for (let dog of dogs) {
-    const dogsDiv = renderDogs(dogs);
+    const dogsDiv = renderDog(dog);
     list.append(dogsDiv);
 }
 });
