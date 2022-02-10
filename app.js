@@ -3,15 +3,14 @@ import { dogs } from './dogs/dog-data.js';
 import { renderDog } from './render.js';
 
 const renderListButton = document.getElementById('list-button');
-// let state
-let list = document.getElementById("lists");
+const listsContainer = document.getElementById('lists-container');
 
 // set event listeners
 renderListButton.addEventListener('click', () => {
   
   for (let dog of dogs) {
     const dogsDiv = renderDog(dog);
-    list.append(dogsDiv);
+    listsContainer.append(dogsDiv);
 }
 });
   // get user input
