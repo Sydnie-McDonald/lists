@@ -1,4 +1,5 @@
 import { dogs } from './dogs/dog-data.js';
+import { cars } from './cars/cars-data.js';
 
 export function renderDog(dog) {
     const div = document.createElement('div');
@@ -32,3 +33,34 @@ export function renderDog(dog) {
     return div;
 }
 // finish render function and grab dog id , name, breed, color, and assign the elements
+export function renderCars(car) {
+    const div = document.createElement('div');
+    const brandEl = document.createElement('p');
+    const modelEl = document.createElement('p');
+    const yearEl = document.createElement('p');
+    const colorEl = document.createElement('p');
+    const colorAndyearEl = document.createElement('div');
+
+    div.classList.add('car-lists-container');
+
+    brandEl.textContent = car.brand;
+    brandEl.classList.add('brand');
+
+    modelEl.textContent = car.model;
+    modelEl.classList.add('model');
+
+    yearEl.textContent = car.year;
+    yearEl.classList.add('year');
+
+    colorEl.textContent = car.color;
+    colorEl.classList.add('color');
+
+    colorAndyearEl.classList.add('color-and-year');
+
+    colorAndyearEl.append(colorEl, yearEl);
+
+
+    div.append(brandEl, modelEl, colorAndyearEl);
+
+    return div;
+}

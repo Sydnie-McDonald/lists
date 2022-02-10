@@ -1,19 +1,32 @@
 // import functions and grab DOM elements
 import { dogs } from './dogs/dog-data.js';
-import { renderDog } from './render.js';
+import {
+    renderDog,
+    renderCars,
+} from './render.js';
 
-const renderListButton = document.getElementById('list-button');
-const listsContainer = document.getElementById('lists-container');
+const renderDogListButton = document.getElementById('dog-list-button');
+const listsContainer = document.getElementById('dog-lists-container');
+
+const renderCarListButton = document.getElementById('car-list-button');
+const carListsContainer = document.getElementById('car-lists-container');
+
 
 // set event listeners
-renderListButton.addEventListener('click', () => {
-  
-  for (let dog of dogs) {
-    const dogsDiv = renderDog(dog);
-    listsContainer.append(dogsDiv);
-}
-});
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+renderDogListButton.addEventListener('click', () => {
 
+    for (let dog of dogs) {
+        const dogsDiv = renderDog(dog);
+        listsContainer.append(dogsDiv);
+    }
+});
+// get user input
+// use user input to update state 
+// update DOM to reflect the new state
+renderCarListButton.addEventListener('click', () => {
+
+    for (let car of cars) {
+        const carsDiv = renderCars(car);
+        carListsContainer.append(carsDiv);
+    }
+});
